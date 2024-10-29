@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Car Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Сайт по ремонту автомобилей, где вы можете найти ближайшую станцию техобслуживания, записаться на ремонт и отслеживать статус выполнения заказа.
 
-Currently, two official plugins are available:
+## Стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Frontend: React, React Router, Tailwind UI
+- Backend: NestJS, TypeORM, PostgreSQL
+- API: REST API
 
-## Expanding the ESLint configuration
+## Функционал
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Поиск ближайшей станции техобслуживания
+- Запись на ремонт
+- Отслеживание статуса выполнения заказа
+- Авторизация и аутентификация пользователей
+- Административная часть для управления станциями техобслуживания и заказами
 
-- Configure the top-level `parserOptions` property like this:
+## Установка
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Установите Node.js
+2. Установите зависимости `npm install`
+3. Запустите проект `npm run dev`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Разработка
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Установите зависимости `npm install`
+2. Запустите проект `npm run dev`
+3. Откройте веб-браузер `http://localhost:5173`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Production
+
+1. Установите зависимости `npm install`
+2. Соберите проект `npm run build`
+3. Запустите проект `npm run preview`
+
